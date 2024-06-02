@@ -28,6 +28,12 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+app.use("/api/test", (req, res) => {
+  return res.status(200).json({
+    message: 'Test Api Is working'
+  })
+});
+
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
